@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="./mystyle.css" type="text/css" >
+        <title>Control Center</title>
+    </head>
+    <Style>
+        ul{
+            list-style-type: none;
+        }
+        body{
+            background-image: url("/images/thumb-1920-677266.png");
+        }
+    </Style>
+    <body>
+        
+        <nav>
+            <div class="logo" align = "center"><h1>CONTROL CENTER</h1></div>
+            <div class="nav-items">
+                 <li><a href="/new">New Product</a></li>
+                 <li><a href="/viewproducts">View Products</a></li>
+            </div>
+        </nav>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Date</td>
+                <td>Clothes</td>
+                <td>Image</td>
+                <td>Option</td>
+            </tr>
+            {{#each model}}
+            <tr>
+                <td><a href="edit?pid={{_id}}">{{productName}}</a></td>
+                <td>{{price}}</td>
+                <td>{{ImportedDate}}</td>
+                <td>{{outfit}}</td> 
+                <td>{{img}}</td>
+                <td><button><a href="/delete?id={{_id}}"">Delete</a></button></td>
+            </tr>
+            {{/each}}
+        </table>
+    </body>
+</html>

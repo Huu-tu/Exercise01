@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="./mystyle.css" type="text/css"/>
+        <title>Edit</title>
+        <style>
+        input[type=text],
+        textarea {
+            width: 60%;
+            padding: 30px;
+            border: 10px solid #ccc;
+            border-radius: 10px;
+            resize: inherit;
+        }
+
+        body {
+            background-image: url("/images/kame-house-dragon-ball-z-1600×1200.jpg");
+            background-repeat: repeat;
+         }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <table style="margin-left: 180px; margin-top: 150px;">
+                 <form action="/update" method="POST">
+            <input type="hidden" name="pid" value="{{model._id}}">
+            <tr>
+                   <td colspan="2" align="center"></td>
+            </tr>
+            Name <input type="text" name="productName" value="{{model.productName}}">
+            <br>
+            Price <input type="Number" name="price" value="{{model.price}}">
+            <br>
+            Date <input type="datetime-local" name="ImportedDate" value="{{model.ImportedDate}}">
+            <br>
+            About <input type="text" name="outfit" value="{{model.outfit}}">
+            <br>
+            <input type="submit" value="Update">
+        </form>
+            </table>
+        </div>
+    </body>
+</html>

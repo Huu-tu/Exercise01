@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="./mystyle.css" type="text/css"/>
+        <title>Add Product</title>
+        <style>
+        input[type=text],
+        textarea {
+            width: 60%;
+            padding: 30px;
+            border: 10px solid #ccc;
+            border-radius: 10px;
+            resize: inherit;
+        }
+
+        body {
+            background-image: url("/images/kame-house-dragon-ball-z-1600×1200.jpg");
+            background-repeat: repeat;
+         }
+    </style>
+    </head>
+    <body>
+        <div class ="container">
+            <h1 align = "center">NEW PRODUCT</h1>
+            <table style="margin-left: 180px; margin-top: 150px;">
+               <form action="/insert" method="POST">
+               <tr>
+                   <td colspan="2" align="center"></td>
+               </tr>
+               <tr>
+                   <td><h3>Product Name</h3><input type="text" name="productName"></td>
+               </tr>
+               <tr>
+                   <td><h3>Price (USD)</h3><input type="number" name="price" id=""></td>
+               </tr>
+               <tr>
+                  <td><h3>Added Date</h3><input type="datetime-local" name="ImportedDate" id=""></td> 
+               </tr>
+               <tr>
+                   <td><h3>About</h3><input type="text" name="outfit" id=""></td>
+               </tr>
+                <tr>
+                    <td><h3>Image</h3><input type = "text" name="img"></td>
+                </tr>
+               <tr>
+                   <br>
+                   <td align="center"><input type="submit" value="ADD"></td>
+               </tr>
+           
+        </form>  
+            </table>
+        </div>
+       
+    </body>
+</html>

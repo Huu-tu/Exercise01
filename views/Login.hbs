@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./mystyle.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+ <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #cccccc;
+            min-height: 70px;
+            padding: 15px;
+        }
+
+        main {
+            background-color: #dddddd;
+            min-height: 550px;
+            padding: 7.5px 15px;
+        }
+
+        footer {
+            background-color: #cccccc;
+            min-height: 70px;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            margin: 120px auto;
+            background-color: #ffffff;
+            padding: 15px;
+            border: 2px dotted #cccccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #009999;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #009999;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            margin-bottom: 10px;
+        }
+
+        .input-box input {
+            padding: 7.5px 15px;
+            width: 100%;
+            border: 1px solid #cccccc;
+            outline: none;
+        }
+
+        .btn-box {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .btn-box button {
+            padding: 7.5px 15px;
+            border-radius: 2px;
+            background-color: #009999;
+            color: #ffffff;
+            border: none;
+            outline: none;
+        }
+    </style>
+<body>
+    <h1>Login page</h1>
+    <div class="container">
+        <div class="login-form">
+            <div class="input-box">
+      <form action="/doLogin" method="post">
+    Name    <input type="text" name="txtName" size="20" required>
+    <br>
+    Password    <input type="password" name="txtPassword" id="" required>
+    <bR>
+    <input type="submit" value="Login">
+      <span style="color: red;">{{errorMsg}}</span>
+    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
